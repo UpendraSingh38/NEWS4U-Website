@@ -1,0 +1,51 @@
+React Component Lifecycle Method
+Component LifeCycle: The series of events that happens from the mounting of a React Component to its unmounting.
+
+Mounting: Birth of your component
+
+Update: Growth of your component
+
+Unmount: Death of your component
+
+Here, we would discuss only the most important component lifecycle method. So, let’s begin understanding component lifecycle methods.
+
+Methods in React Component Lifecycle
+render() Method: It is used to render the HTML of the component in React. It is used to render the DOM while using the class-based component. Remember, Inside the Render method we cannot modify the state in React.
+componentDidMount(): This method executes after the component output has been rendered to the DOM. We have already used this method in the NewsMonkey Application for fetching the Data from the API. You can also use setState, async, and await methods in ComponentDidMount().
+componentDidUpdate(): This method is used to update the DOM in response to the prop or state changes. Remember that props are read-only. That’s why here, ‘changes in the prop’ means that it can be received again in the component.
+componentWillUnmount(): It is invoked just before the component is unmounted and destroyed. It is usually used to perform cleanups.
+These are the four most commonly used React Component Lifecycle methods.
+
+React Lifecycle methods diagram by wojtekmaj.pl
+You can access the interactive diagram which explains the lifecycle method of React by clicking here. Here’s how the diagram looks like:
+
+
+
+Figure 1.3: React Lifecycle Methods Diagram
+
+Here’s the sequence of the methods that will run while Mounting, Unmounting, Updating the React component.
+
+While Mounting
+In this case, the ‘Constructor’ runs first after that the ‘render’ lifecycle method is invoked. After that, React will update the DOM and finally, the ComponentDidMount will be executed.
+
+While Updating
+The three possible ways in which one can update the React component are:
+
+New props
+Using setState
+Using forceupdate()
+After updating the component, the render method will be executed at the start. After that react updates the "DOM and references" and in the end, the componentDidUpdate method will be run.
+
+While Unmounting
+At the time of unmounting, only the componentWillUnmount method will be executed and the component will be unmounted.
+
+ 
+
+Here, we complete the 34th video of this React series. In the next videos, we will be enhancing the NewsMonkey Application by adding some more features and understanding some amazing concepts of React. 
+
+Do remember to Access the playlist of the Free React Course in Hindi by clicking here.
+
+Check out our Github to access the source code at this point in the course,  Click Here
+
+Thank you for being with me throughout the tutorial. In the next tutorial, we will be adding infinite scroll to NewsMonkey. Till then, Keep learning and Keep Coding. 
+
